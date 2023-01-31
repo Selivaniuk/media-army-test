@@ -1,0 +1,30 @@
+@import "variables.scss";
+
+body {
+    font-family: "Arial-Nova", sans-serif;
+    background-color: $background-tertiary;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+}
+
+svg {
+    display: block;
+    max-width: 100%;
+}
+input,
+button {
+    font: inherit;
+}
