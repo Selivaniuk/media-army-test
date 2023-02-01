@@ -1,0 +1,144 @@
+@import "utils/variables.scss";
+@import "utils/font-mixins.scss";
+
+.button {
+    position: relative;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    cursor: pointer;
+    border: none;
+    overflow: hidden;
+    transition: color 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transform: scaleX(0);
+        transition: transform 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+        transform-origin: center right;
+    }
+
+    > p,
+    .icon {
+        z-index: 2;
+    }
+}
+
+.filled {
+    background-color: $accent;
+    color: $label-primary;
+
+    &::before {
+        background-color: $background-quaternary;
+    }
+    &:hover {
+        color: $label-tertiary;
+        &::before {
+            transform: scaleX(1);
+            transform-origin: center left;
+        }
+        svg {
+            color: $label-tertiary;
+        }
+    }
+    svg {
+        color: $label-primary;
+    }
+}
+.outline {
+    background-color: initial;
+    color: $label-primary;
+    border: 1px solid $accent;
+
+    &::before {
+        background-color: $accent;
+    }
+    &:hover {
+        color: $label-primary;
+        &::before {
+            transform: scaleX(1);
+            transform-origin: center left;
+        }
+        svg {
+            color: $label-primary;
+        }
+    }
+    svg {
+        color: $label-primary;
+    }
+}
+
+.small {
+    padding: 12px 20px;
+    p {
+        @include button_2;
+    }
+}
+.large {
+    padding: 20px 40px;
+    p {
+        @include button;
+    }
+}
+
+.rounded {
+    border-radius: 7px;
+    &::before {
+        border-radius: 7px;
+    }
+}
+
+.onlyIcon {
+    padding: 0px;
+}
+.icon {
+    > svg {
+        transition: color 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+}
+.icon_size_large {
+    width: 60px;
+    height: 60px;
+}
+.icon_size_small {
+    width: 40px;
+    height: 40px;
+}
+.icon_rounded {
+    border-radius: 50%;
+
+    &::before {
+        border-radius: 50%;
+    }
+}
+
+.disabled {
+    cursor: default;
+    border: none;
+
+    color: $label-tertiary;
+    background-color: $background-quaternary;
+    opacity: 0.5;
+
+    svg {
+        color: $label-tertiary;
+    }
+    &::before {
+        display: none;
+    }
+    &:hover {
+        color: $label-tertiary;
+        background-color: $background-quaternary;
+        svg {
+            color: $label-tertiary;
+        }
+    }
+}

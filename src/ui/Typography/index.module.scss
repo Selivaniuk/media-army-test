@@ -1,0 +1,45 @@
+@import "utils/font-mixins.scss";
+
+.h0 {
+    @include h0;
+}
+.h1 {
+    @include h1;
+}
+.h2 {
+    @include h2;
+}
+.h3 {
+    @include h3;
+}
+.h4 {
+    @include h4;
+}
+
+.description {
+    @include description;
+}
+
+.link {
+    @include link;
+}
+
+.text_1 {
+    @include text_1;
+}
+.text_2 {
+    @include text_2;
+}
+.text_3 {
+    @include text_3;
+}
+.text_4 {
+    @include text_4;
+}
+
+.button {
+    @include button;
+}
+.button_2 {
+    @include button_2;
+}

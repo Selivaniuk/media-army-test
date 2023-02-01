@@ -1,0 +1,11 @@
+@import "utils/variables.scss";
+
+.options-enter,
+.options-exit {
+    transition: height 0.6s ease;
+}
+.options-enter,
+.options-enter-done {
+    border: 1px solid $label-secondary;
+    box-shadow: $shadow;
+}

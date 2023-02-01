@@ -1,0 +1,104 @@
+@import "utils/variables.scss";
+@import "utils/font-mixins.scss";
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 660px;
+
+    border: 1px solid $label-secondary;
+    border-radius: 7px;
+
+    transition: border-color 0.3s;
+    &:hover {
+        border-color: $label-primary;
+        .description {
+            color: $label-primary;
+        }
+    }
+}
+.hasDescription {
+    margin-bottom: 20px;
+}
+
+.placeholder {
+    z-index: 1;
+    pointer-events: none;
+    position: absolute;
+    top: calc(50% - 10px);
+    left: 30px;
+
+    opacity: 1;
+    transition: opacity 0.3s;
+
+    display: flex;
+    gap: 4px;
+
+    > p {
+        color: $red;
+    }
+}
+
+.label {
+    z-index: 1;
+    pointer-events: none;
+    position: absolute;
+    top: 8px;
+    left: 30px;
+    color: $label-secondary;
+    opacity: 0;
+    transition: opacity 0.3s;
+
+    display: flex;
+    gap: 2px;
+
+    > p {
+        color: $label-secondary;
+    }
+}
+.suffix {
+    position: absolute;
+    right: 10px;
+    top: calc(50% - 10px);
+}
+.description {
+    position: absolute;
+    bottom: -20px;
+
+    color: $label-secondary;
+    transition: color 0.3s;
+}
+.visibleLabel {
+    opacity: 1;
+}
+.focused {
+    .placeholder {
+        opacity: 0;
+    }
+    .label {
+        opacity: 1;
+    }
+    border-color: $accent;
+
+    &:hover {
+        border-color: $accent;
+        .description {
+            color: $label-secondary;
+        }
+    }
+}
+.error {
+    border-color: $red;
+    .placeholder {
+        color: $red;
+    }
+    &:hover {
+        border-color: $red;
+        .description {
+            color: $red;
+        }
+    }
+    .description {
+        color: $red;
+    }
+}

@@ -1,0 +1,40 @@
+@mixin h0 {
+    font-size: 81px;
+}
+@mixin h1 {
+    font-size: 67px;
+}
+@mixin h2 {
+    font-size: 51px;
+}
+@mixin h3 {
+    font-size: 38px;
+}
+@mixin h4 {
+    font-size: 21px;
+}
+@mixin description {
+    font-size: 28px;
+}
+@mixin link {
+    font-size: 15px;
+}
+@mixin text_1 {
+    font-size: 16px;
+}
+@mixin text_2 {
+    font-size: 14px;
+}
+@mixin text_3 {
+    font-size: 12px;
+    font-weight: 700;
+}
+@mixin text_4 {
+    font-size: 12px;
+}
+@mixin button {
+    font-size: 16px;
+}
+@mixin button_2 {
+    font-size: 13px;
+}
