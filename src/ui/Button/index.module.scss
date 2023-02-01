@@ -4,6 +4,8 @@
 .button {
     position: relative;
 
+    overflow: hidden;
+
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -91,9 +93,6 @@
 
 .rounded {
     border-radius: 7px;
-    &::before {
-        border-radius: 7px;
-    }
 }
 
 .onlyIcon {

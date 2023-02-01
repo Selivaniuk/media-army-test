@@ -9,16 +9,25 @@ type PropsType = {
   to: string;
 };
 
-const Link: React.FC<PropsType> = ({ children, icon, type = "light", to }) => {
+const Link: React.FC<PropsType> = ({
+  className,
+  children,
+  icon,
+  type = "light",
+  to,
+}) => {
   if (!icon) {
     return (
-      <RouterLink className={classNames([styles.link, styles.noIco])} to={to}>
+      <RouterLink
+        className={classNames([styles.link, styles.noIco, className])}
+        to={to}
+      >
         {children}
       </RouterLink>
     );
   }
   return (
-    <div className={classNames([styles.container, styles[type]])}>
+    <div className={classNames([styles.container, styles[type], className])}>
       <span className={styles.icon}>{icon}</span>
       <RouterLink className={classNames([styles.link])} to={to}>
         {children}

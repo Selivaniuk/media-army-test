@@ -20,6 +20,7 @@ body,
 svg {
     display: block;
     max-width: 100%;
+    min-width: fit-content;
 }
 input,
 button {
