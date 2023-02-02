@@ -11,12 +11,17 @@
     &::before {
         content: "";
         display: block;
+
         width: 0px;
         height: 2px;
-        background-color: $accent;
-        position: absolute;
-        bottom: -2px;
+
         transition: linear width 0.3s;
+
+        position: absolute;
+        left: 0;
+        bottom: -2px;
+
+        background-color: $accent;
     }
     &:hover {
         &::before {

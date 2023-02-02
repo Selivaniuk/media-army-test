@@ -4,10 +4,12 @@
 .container {
     position: relative;
     width: 100%;
-    max-width: 660px;
+    max-width: 680px;
 
     border: 1px solid $label-secondary;
     border-radius: 7px;
+
+    margin-bottom: 20px;
 
     transition: border-color 0.3s;
     &:hover {
@@ -17,23 +19,24 @@
         }
     }
 }
-.hasDescription {
-    margin-bottom: 20px;
-}
 
 .placeholder {
     z-index: 1;
     pointer-events: none;
     position: absolute;
-    top: calc(50% - 10px);
+    top: 10px;
     left: 30px;
 
+    color: $label-primary;
+    @include text_1;
+
     opacity: 1;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s, color 0.3s;
 
     display: flex;
     gap: 4px;
 
+    padding: 19px 0px;
     > p {
         color: $red;
     }
@@ -45,7 +48,10 @@
     position: absolute;
     top: 8px;
     left: 30px;
+
     color: $label-secondary;
+    @include text_1;
+
     opacity: 0;
     transition: opacity 0.3s;
 
@@ -63,7 +69,7 @@
 }
 .description {
     position: absolute;
-    bottom: -20px;
+    bottom: -30px;
 
     color: $label-secondary;
     transition: color 0.3s;

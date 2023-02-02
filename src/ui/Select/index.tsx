@@ -7,12 +7,13 @@ import InputContainer from "ui/InputContainer";
 import styles from "./index.module.scss";
 import "./animations.scss";
 
-type Value<T> = { value: T; label: string };
+// type Value<T> = { value: T; label: string };
+type Option = { value: string; label: string };
 
-type PropsType<T> = {
-  options: Value<T>[];
-  value?: Value<T>;
-  onChange?: (value: Value<T>) => void;
+type PropsType = {
+  options: Option[];
+  value?: string;
+  onChange?: (value: string) => void;
   placeholder?: string;
   label?: string;
   description?: string;
@@ -20,7 +21,7 @@ type PropsType<T> = {
   required?: boolean;
 };
 
-const Select = <T extends string | number>({
+const Select: React.FC<PropsType> = ({
   options,
   description,
   isError,
@@ -29,7 +30,7 @@ const Select = <T extends string | number>({
   placeholder,
   required,
   value,
-}: PropsType<T>) => {
+}) => {
   const [isOpen, setIsOpen] = useState(false);
   const ref = useClickOutside(() => setIsOpen(false));
   const nodeRef = useRef<HTMLDivElement>(null);
@@ -45,7 +46,7 @@ const Select = <T extends string | number>({
     isError,
     required,
   };
-  const handleChange = (value: Value<T>) => {
+  const handleChange = (value: string) => {
     onChange?.(value);
     setIsOpen(false);
   };
@@ -69,7 +70,11 @@ const Select = <T extends string | number>({
     >
       <div ref={ref} className={styles.container}>
         <div className={styles.value} onClick={() => setIsOpen(!isOpen)}>
-          {value && <Typography.Text1>{value.label}</Typography.Text1>}
+          {value && (
+            <Typography.Text1>
+              {options.find((o) => o.value === value)?.label}
+            </Typography.Text1>
+          )}
         </div>
         <CSSTransition
           nodeRef={nodeRef}
@@ -87,9 +92,9 @@ const Select = <T extends string | number>({
                 key={option.value}
                 className={classNames([
                   styles.option,
-                  { [styles.activeOption]: option.value === value?.value },
+                  { [styles.activeOption]: option.value === value },
                 ])}
-                onClick={() => handleChange(option)}
+                onClick={() => handleChange(option.value)}
               >
                 <Typography.Text1>{option.label}</Typography.Text1>
               </div>

@@ -16,3 +16,33 @@
         right: 135px;
     }
 }
+
+.form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+
+    @media only screen and (min-width: $desktop-width) {
+        width: 680px;
+    }
+}
+.description {
+    height: 180px;
+}
+.submitContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+
+    > span {
+        color: $label-secondary;
+        @include text_2;
+    }
+    @media only screen and (min-width: $tablet-width) {
+        flex-direction: row;
+        > span {
+            width: 50%;
+        }
+    }
+}

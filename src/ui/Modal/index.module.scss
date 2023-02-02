@@ -1,0 +1,87 @@
+@import "utils/font-mixins.scss";
+@import "utils/variables.scss";
+
+.overlay {
+    position: absolute;
+    z-index: -1;
+
+    background-color: rgba(0, 0, 0, 0.65);
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+
+    transition: opacity 0.3s;
+}
+
+.modalContainer {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    width: 0px;
+    height: 100%;
+
+    overflow: hidden;
+
+    transition: width 0.6s;
+
+    @media only screen and (min-width: $desktop-width) {
+        padding-left: 60px;
+    }
+}
+
+.modal {
+    position: relative;
+    padding: 80px 15px;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: $background-primary;
+
+    @media only screen and (min-width: $tablet-width) {
+        padding: 120px 60px;
+        width: max-content;
+    }
+    @media only screen and (min-width: $desktop-width) {
+        padding: 100px 120px 100px 60px;
+        width: max-content;
+    }
+}
+
+.title {
+    color: $label-primary;
+    margin-bottom: 20px;
+    @include h3;
+
+    @media only screen and (min-width: $desktop-width) {
+        margin-bottom: 40px;
+    }
+}
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.visibleOverlay {
+    opacity: 1;
+    z-index: 1;
+}
+.content {
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+.visibleModal {
+    .close {
+        @media only screen and (min-width: $desktop-width) {
+            left: -60px;
+        }
+    }
+    .content {
+        opacity: 1;
+    }
+}

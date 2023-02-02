@@ -5,7 +5,7 @@ import InputContainer from "ui/InputContainer";
 
 type PropsType = React.InputHTMLAttributes<HTMLInputElement> & {
   value?: string;
-  onChange?: (value?: string) => void;
+  onChange?: (event?: React.ChangeEvent<HTMLInputElement>) => void;
   placeholder?: string;
   label?: string;
   description?: string;
@@ -36,10 +36,11 @@ const Input: React.FC<PropsType> = ({
   return (
     <InputContainer
       {...containerData}
-      hasValue={!!inputValue.current.length}
+      hasValue={!!inputValue.current.length || !!props.value}
       isFocused={focused}
     >
       <input
+        {...props}
         onFocus={(e) => {
           setFocused(true);
         }}
@@ -51,7 +52,6 @@ const Input: React.FC<PropsType> = ({
           inputValue.current = e.target.value;
         }}
         className={classNames([styles.input, className])}
-        {...props}
       />
     </InputContainer>
   );

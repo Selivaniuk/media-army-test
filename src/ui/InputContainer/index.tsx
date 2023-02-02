@@ -35,34 +35,30 @@ const InputContainer: React.FC<PropsType> = ({
         styles.container,
         { [styles.focused]: isFocused },
         { [styles.error]: isError },
-        { [styles.hasDescription]: !!description },
       ])}
     >
       {placeholder && !hasValue && (
-        <Typography.Text1 className={styles.placeholder}>
-          {placeholder}
-          {required && <Typography.Text1>*</Typography.Text1>}
-        </Typography.Text1>
+        <span className={styles.placeholder}>
+          {placeholder} <Typography.Text1>*</Typography.Text1>
+        </span>
       )}
       {label && (
-        <Typography.Text4
+        <span
           className={classNames([
             styles.label,
             { [styles.visibleLabel]: !!hasValue },
           ])}
         >
           {label} {required && <Typography.Text4>*</Typography.Text4>}
-        </Typography.Text4>
+        </span>
       )}
       {children}
       {suffix && <span className={styles.suffix}>{suffix}</span>}
-      {description && (
-        <Typography.Text4
-          className={classNames([styles.description, classNameDescription])}
-        >
-          {description}
-        </Typography.Text4>
-      )}
+      <Typography.Text4
+        className={classNames([styles.description, classNameDescription])}
+      >
+        {description ?? ""}
+      </Typography.Text4>
     </div>
   );
 };
