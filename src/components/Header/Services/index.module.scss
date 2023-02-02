@@ -10,11 +10,14 @@
     transform: rotate(180deg);
 }
 .menu {
+    z-index: 1;
     position: absolute;
     left: 0px;
     width: 100%;
     bottom: -1px;
     transform: translate(0px, 100%);
+
+    // height: calc(200% + 80px);
 
     // padding: 40px 0px;
     overflow: hidden;

@@ -4,3 +4,15 @@
 .header_service_menu-exit {
     transition: height 0.6s ease;
 }
+.header_service_menu-enter {
+    height: calc(200% + 80px);
+}
+
+.header_service_menu-enter-done {
+    height: calc(200% + 80px);
+}
+
+.header_service_menu-exit,
+.header_service_menu-exit-done {
+    height: 0px;
+}

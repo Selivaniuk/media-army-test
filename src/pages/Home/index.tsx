@@ -1,10 +1,4 @@
-import { Header } from "components";
-
 const Home = () => {
-  return (
-    <div>
-      <Header />
-    </div>
-  );
+  return <div></div>;
 };
 export default Home;

@@ -77,6 +77,29 @@
         color: $label-primary;
     }
 }
+.outline-dark {
+    background-color: initial;
+    color: $label-primary;
+    border: 1px solid $label-primary;
+
+    svg {
+        color: $label-primary;
+    }
+
+    &::before {
+        background-color: $label-primary;
+    }
+    &:hover {
+        color: $accent;
+        &::before {
+            transform: scaleX(1);
+            transform-origin: center left;
+        }
+        svg {
+            color: $accent;
+        }
+    }
+}
 
 .small {
     padding: 12px 20px;

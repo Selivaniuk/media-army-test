@@ -1,0 +1,18 @@
+@import "utils/variables.scss";
+@import "utils/font-mixins.scss";
+
+.button {
+    position: absolute;
+    z-index: 1;
+    right: 60px;
+    top: 10px; // top: calc(50% - 25px);
+    > p {
+        @include button;
+    }
+    width: 176px;
+    height: 50px;
+
+    @media only screen and (min-width: $desktop-width) {
+        right: 135px;
+    }
+}
