@@ -4,9 +4,10 @@ import classNames from "classnames";
 import { Button, Icons, Link } from "ui";
 import useWindowDimensions from "hooks/useWindowDimensions";
 import { header_links } from "../index";
-import { service_links } from "../Services";
+import { service_links } from "../ServicesMenu";
 import styles from "./index.module.scss";
 import "./animations.scss";
+import { useDisableBodyScroll } from "hooks/useDisableBodyScroll";
 
 type PropsType = {
   visible: boolean;
@@ -37,6 +38,7 @@ const center_links = [
 const NavigationMenu: React.FC<PropsType> = ({ visible }) => {
   const menuRef = useRef<HTMLDivElement>(null);
   const { width } = useWindowDimensions();
+  useDisableBodyScroll(visible);
 
   //   useEffect(() => {
   //     if (

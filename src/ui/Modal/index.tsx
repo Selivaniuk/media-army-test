@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { useClickOutside } from "hooks/useClickOutside";
+import { useDisableBodyScroll } from "hooks/useDisableBodyScroll";
 import useWindowDimensions from "hooks/useWindowDimensions";
 import { useCallback, useEffect, useState } from "react";
 import { Icons } from "ui";
@@ -16,8 +16,8 @@ type PropsType = {
 const Modal: React.FC<PropsType> = ({ visible, onClose, title, children }) => {
   const [width, setWidth] = useState(0);
   const dimensions = useWindowDimensions();
+  useDisableBodyScroll(visible);
 
-  const ref = useClickOutside(onClose);
   const measuredRef = useCallback(
     (node: HTMLDivElement) => {
       if (node !== null && visible) {
@@ -42,6 +42,7 @@ const Modal: React.FC<PropsType> = ({ visible, onClose, title, children }) => {
           styles.overlay,
           { [styles.visibleOverlay]: visible },
         ])}
+        onClick={() => onClose()}
       />
       <div
         className={classNames([
@@ -50,19 +51,17 @@ const Modal: React.FC<PropsType> = ({ visible, onClose, title, children }) => {
         ])}
         style={{ width }}
       >
-        <div ref={ref} style={{ height: "100%" }}>
-          <div ref={measuredRef} className={styles.modal}>
-            <Button
-              onClick={onClose}
-              className={styles.close}
-              icon={<Icons.Close />}
-              rounded={false}
-            />
+        <div className={styles.modal}>
+          <Button
+            onClick={onClose}
+            className={styles.close}
+            icon={<Icons.Close />}
+            rounded={false}
+          />
 
-            <div className={styles.content}>
-              {title && <p className={styles.title}>{title}</p>}
-              {children}
-            </div>
+          <div className={styles.content} ref={measuredRef}>
+            {title && <p className={styles.title}>{title}</p>}
+            {children}
           </div>
         </div>
       </div>

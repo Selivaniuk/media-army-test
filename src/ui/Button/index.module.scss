@@ -4,8 +4,6 @@
 .button {
     position: relative;
 
-    overflow: hidden;
-
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -53,6 +51,28 @@
     }
     svg {
         color: $label-primary;
+    }
+}
+.filled-light {
+    background-color: $accent;
+    color: $label-primary;
+
+    svg {
+        color: $label-primary;
+    }
+
+    &::before {
+        background-color: $background-primary;
+    }
+    &:hover {
+        color: $label-primary;
+        &::before {
+            transform: scaleX(1);
+            transform-origin: center left;
+        }
+        svg {
+            color: $label-primary;
+        }
     }
 }
 .outline {
@@ -122,6 +142,10 @@
     padding: 0px;
 }
 .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     min-width: 24px;
     min-height: 24px;
 

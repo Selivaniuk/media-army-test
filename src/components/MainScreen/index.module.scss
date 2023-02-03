@@ -1,0 +1,87 @@
+@import "utils/variables.scss";
+@import "utils/font-mixins.scss";
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    > div {
+        width: 100%;
+    }
+
+    @media only screen and (min-width: $desktop-width) {
+        flex-direction: row;
+    }
+}
+
+.info {
+    padding: 60px 15px;
+    background-color: $background-quaternary;
+
+    @media only screen and (min-width: $tablet-width) {
+        padding: 60px 52px;
+    }
+    @media only screen and (min-width: $desktop-width) {
+        padding: 80px 40px 60px 130px;
+    }
+}
+
+.title {
+    @include h1;
+    color: $label-tertiary;
+
+    margin-bottom: 20px;
+
+    @media only screen and (min-width: $desktop-width) {
+        margin-bottom: 40px;
+    }
+}
+
+.number {
+    @include h1;
+    color: $accent;
+
+    margin-bottom: 40px;
+
+    @media only screen and (min-width: $desktop-width) {
+        margin-bottom: 60px;
+    }
+}
+
+.addresses {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    margin-bottom: 40px;
+
+    @media only screen and (min-width: $desktop-width) {
+        margin-bottom: 60px;
+    }
+}
+.label {
+    @include text_1;
+    color: $label-secondary;
+}
+.value {
+    @include text_1;
+    color: $label-tertiary;
+}
+
+.button {
+    svg {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.slider {
+    height: 320px;
+    @media only screen and (min-width: $tablet-width) {
+        height: 620px;
+    }
+    @media only screen and (min-width: $desktop-width) {
+        max-width: 650px;
+        height: auto;
+    }
+}

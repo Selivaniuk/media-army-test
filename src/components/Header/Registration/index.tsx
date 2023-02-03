@@ -72,7 +72,7 @@ const Registration: React.FC<PropsType> = ({ isOpenMenu }) => {
           buttonRef={nodeRef}
           className={styles.button}
           size="small"
-          onClick={() => setOpen(!open)}
+          onClick={() => setOpen((prev) => !prev)}
         >
           Запись на сервис
         </Button>

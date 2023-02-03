@@ -7,6 +7,7 @@ import Services from "./Services";
 import Navigation from "./Navigation";
 import NavigationMenu from "./NavigationMenu";
 import Registration from "./Registration";
+import ServicesMenu from "./ServicesMenu";
 
 export const header_links = [
   [
@@ -37,9 +38,14 @@ export const header_links = [
 
 const Header = () => {
   const { width } = useWindowDimensions();
-  const [isOpenServicesMenu, setIsOpenServicesMenu] = useState(false);
+  const [isHoverServicesMenu, setIsHoverServicesMenu] = useState({
+    isHeaderHover: false,
+    isMenuHover: false,
+  });
   const [isOpenNavigationMenu, setIsOpenNavigationMenu] = useState(false);
 
+  const isOpenServicesMenu =
+    isHoverServicesMenu.isHeaderHover || isHoverServicesMenu.isMenuHover;
   return (
     <>
       <header
@@ -49,7 +55,9 @@ const Header = () => {
             [styles.isOpenMenu]: isOpenServicesMenu || isOpenNavigationMenu,
           },
         ])}
-        onMouseLeave={() => setIsOpenServicesMenu(false)}
+        onMouseLeave={() =>
+          setIsHoverServicesMenu((prev) => ({ ...prev, isHeaderHover: false }))
+        }
       >
         <div className={styles.headerLayout}>
           {width > 450 ? (
@@ -61,7 +69,12 @@ const Header = () => {
             <div className={styles.links}>
               <Services
                 isOpenMenu={isOpenServicesMenu}
-                setIsOpenMenu={setIsOpenServicesMenu}
+                setIsOpenMenu={(e) =>
+                  setIsHoverServicesMenu((prev) => ({
+                    ...prev,
+                    isHeaderHover: e,
+                  }))
+                }
               />
               {header_links.map((linkBlock) =>
                 linkBlock.map((link) => (
@@ -83,6 +96,15 @@ const Header = () => {
         </div>
       </header>
       <Registration isOpenMenu={isOpenNavigationMenu} />
+      <ServicesMenu
+        isOpenMenu={isOpenServicesMenu}
+        setIsOpenMenu={(e) =>
+          setIsHoverServicesMenu((prev) => ({
+            ...prev,
+            isMenuHover: e,
+          }))
+        }
+      />
       <NavigationMenu visible={isOpenNavigationMenu} />
     </>
   );

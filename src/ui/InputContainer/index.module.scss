@@ -6,14 +6,15 @@
     width: 100%;
     max-width: 680px;
 
-    border: 1px solid $label-secondary;
+    outline: 1px solid $label-secondary;
+
     border-radius: 7px;
 
     margin-bottom: 20px;
 
-    transition: border-color 0.3s;
+    transition: outline-color 0.3s;
     &:hover {
-        border-color: $label-primary;
+        outline-color: $label-primary;
         .description {
             color: $label-primary;
         }
@@ -84,22 +85,22 @@
     .label {
         opacity: 1;
     }
-    border-color: $accent;
+    outline-color: $accent;
 
     &:hover {
-        border-color: $accent;
+        outline-color: $accent;
         .description {
             color: $label-secondary;
         }
     }
 }
 .error {
-    border-color: $red;
+    outline-color: $red;
     .placeholder {
         color: $red;
     }
     &:hover {
-        border-color: $red;
+        outline-color: $red;
         .description {
             color: $red;
         }

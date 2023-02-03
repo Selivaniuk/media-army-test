@@ -2,8 +2,8 @@
 @import "utils/font-mixins.scss";
 
 .button {
-    position: absolute;
-    z-index: 1;
+    position: fixed;
+    z-index: 4;
     right: 60px;
     top: 10px; // top: calc(50% - 25px);
     > p {

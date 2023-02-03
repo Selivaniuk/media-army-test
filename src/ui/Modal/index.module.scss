@@ -2,7 +2,8 @@
 @import "utils/variables.scss";
 
 .overlay {
-    position: absolute;
+    top: 0;
+    position: fixed;
     z-index: -1;
 
     background-color: rgba(0, 0, 0, 0.65);
@@ -16,8 +17,9 @@
 }
 
 .modalContainer {
-    position: absolute;
-    z-index: 1;
+    position: fixed;
+    z-index: 5;
+    top: 0;
     left: 0;
     right: 0;
     margin-left: auto;
@@ -35,21 +37,11 @@
 
 .modal {
     position: relative;
-    padding: 80px 15px;
 
     width: 100%;
     height: 100%;
 
     background-color: $background-primary;
-
-    @media only screen and (min-width: $tablet-width) {
-        padding: 120px 60px;
-        width: max-content;
-    }
-    @media only screen and (min-width: $desktop-width) {
-        padding: 100px 120px 100px 60px;
-        width: max-content;
-    }
 }
 
 .title {
@@ -62,24 +54,41 @@
     }
 }
 .close {
-    position: absolute;
-    top: 0;
-    right: 0;
+    display: none;
+    margin-left: auto;
+    @media only screen and (min-width: $desktop-width) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: -60px;
+
+        margin-left: unset;
+    }
 }
 
 .visibleOverlay {
     opacity: 1;
-    z-index: 1;
+    z-index: 4;
 }
 .content {
+    overflow: auto;
+    height: 100%;
+
     opacity: 0;
     transition: opacity 0.2s;
+
+    padding: 80px 15px;
+    @media only screen and (min-width: $tablet-width) {
+        padding: 120px 60px;
+    }
+    @media only screen and (min-width: $desktop-width) {
+        padding: 100px 120px 100px 60px;
+        width: max-content;
+    }
 }
 .visibleModal {
     .close {
-        @media only screen and (min-width: $desktop-width) {
-            left: -60px;
-        }
+        display: block;
     }
     .content {
         opacity: 1;

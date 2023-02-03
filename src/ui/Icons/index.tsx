@@ -628,6 +628,34 @@ const ArrowUpRight: React.FC<SVG> = (props) => {
     </svg>
   );
 };
+const ArrowRight: React.FC<SVG> = (props) => {
+  return (
+    <svg
+      {...props}
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g clipPath="url(#clip0_25_907)">
+        <path
+          d="M5 12H19M19 12L13 18M19 12L13 6"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_25_907">
+          <rect width="24" height="24" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+  );
+};
+
 const ArrowLeft: React.FC<SVG> = (props) => {
   return (
     <svg
@@ -1083,6 +1111,7 @@ const ExportIcons = {
   Square,
   ArrowDown,
   ArrowLeft,
+  ArrowRight,
   ArrowUpRight,
   Check,
   ChevronDown,
