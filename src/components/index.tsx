@@ -6,6 +6,7 @@ import Abstracts from "./Abstracts";
 import OurDirection from "./OurDirection";
 import Promotions from "./Promotions";
 import Reviews from "./Reviews";
+import CarServiceMap from "./CarServiceMap";
 
 export {
   Header,
@@ -16,4 +17,5 @@ export {
   OurDirection,
   Promotions,
   Reviews,
+  CarServiceMap,
 };

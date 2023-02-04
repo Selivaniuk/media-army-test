@@ -6,6 +6,7 @@ import {
   OurDirection,
   Promotions,
   Reviews,
+  CarServiceMap,
 } from "components";
 
 const Home = () => {
@@ -18,6 +19,7 @@ const Home = () => {
       <OurDirection />
       <Promotions />
       <Reviews />
+      <CarServiceMap />
     </div>
   );
 };
