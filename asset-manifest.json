@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/media-army-test/static/css/main.8194ccca.css",
+    "main.js": "/media-army-test/static/js/main.29e69ca3.js",
+    "index.html": "/media-army-test/index.html",
+    "main.8194ccca.css.map": "/media-army-test/static/css/main.8194ccca.css.map",
+    "main.29e69ca3.js.map": "/media-army-test/static/js/main.29e69ca3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8194ccca.css",
+    "static/js/main.29e69ca3.js"
+  ]
+}
