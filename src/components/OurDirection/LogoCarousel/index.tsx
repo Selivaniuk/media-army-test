@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useCallback, useRef, useState } from "react";
 import { useDraggable } from "react-use-draggable-scroll";
 import useWindowDimensions from "hooks/useWindowDimensions";

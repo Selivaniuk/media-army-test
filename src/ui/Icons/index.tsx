@@ -574,6 +574,38 @@ const ChevronRight: React.FC<SVG> = (props) => {
     </svg>
   );
 };
+const ChevronLeft: React.FC<SVG> = (props) => {
+  return (
+    <svg
+      {...props}
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g clipPath="url(#clip0_25_917)">
+        <path
+          d="M14 18L8 12L14 6"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </g>
+      <defs>
+        <clipPath id="clip0_25_917">
+          <rect
+            width="24"
+            height="24"
+            fill="white"
+            transform="matrix(-1 0 0 -1 24 24)"
+          />
+        </clipPath>
+      </defs>
+    </svg>
+  );
+};
 const ArrowDown: React.FC<SVG> = (props) => {
   return (
     <svg
@@ -1117,6 +1149,7 @@ const ExportIcons = {
   ChevronDown,
   ChevronUp,
   ChevronRight,
+  ChevronLeft,
   CircleCheck,
   Close,
   FoodAndDrinks,

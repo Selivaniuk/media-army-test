@@ -1,4 +1,5 @@
 import classNames from "classnames";
+import { useState } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import styles from "./index.module.scss";
 type PropsType = {
@@ -16,6 +17,7 @@ const Link: React.FC<PropsType> = ({
   type = "light",
   to,
 }) => {
+  const [hovered, setHovered] = useState(false);
   if (!icon) {
     return (
       <RouterLink
@@ -27,8 +29,16 @@ const Link: React.FC<PropsType> = ({
     );
   }
   return (
-    <div className={classNames([styles.container, styles[type], className])}>
-      <span className={styles.icon}>{icon}</span>
+    <div
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      className={classNames([
+        styles.container,
+        { [styles.hovered]: hovered },
+        className,
+      ])}
+    >
+      <span className={classNames([styles.icon, styles[type]])}>{icon}</span>
       <RouterLink className={classNames([styles.link])} to={to}>
         {children}
       </RouterLink>

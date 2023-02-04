@@ -6,8 +6,7 @@
     text-decoration: none;
     color: $label-primary;
     @include link;
-}
-.noIco {
+
     &::before {
         content: "";
         display: block;
@@ -23,6 +22,8 @@
 
         background-color: $accent;
     }
+}
+.noIco {
     &:hover {
         &::before {
             width: 100%;
@@ -70,45 +71,68 @@
     }
 }
 .light {
-    .icon {
-        background-color: $accent;
-        svg {
-            color: $label-primary;
-        }
+    background-color: $accent;
+    svg {
+        color: $label-primary;
+    }
 
+    &::before {
+        background-color: $background-quaternary;
+    }
+    &:hover {
         &::before {
-            background-color: $background-quaternary;
+            transform: scaleX(1);
+            transform-origin: center left;
         }
-        &:hover {
-            &::before {
-                transform: scaleX(1);
-                transform-origin: center left;
-            }
-            svg {
-                color: $label-tertiary;
-            }
+        svg {
+            color: $label-tertiary;
         }
     }
 }
 
 .dark {
-    .icon {
-        background-color: $background-primary;
+    background-color: $background-primary;
+    svg {
+        color: $label-primary;
+    }
+
+    &::before {
+        background-color: $accent;
+    }
+    &:hover {
+        &::before {
+            transform: scaleX(1);
+            transform-origin: center left;
+        }
         svg {
             color: $label-primary;
         }
+    }
+}
 
+.hovered {
+    cursor: pointer;
+    .link {
         &::before {
-            background-color: $accent;
+            width: 100%;
         }
-        &:hover {
-            &::before {
-                transform: scaleX(1);
-                transform-origin: center left;
-            }
-            svg {
-                color: $label-primary;
-            }
+    }
+
+    .light {
+        svg {
+            color: $label-tertiary;
+        }
+    }
+    .dark {
+        svg {
+            color: $label-primary;
+        }
+    }
+
+    .icon {
+        &::before {
+            transform: scaleX(1);
+            transform-origin: center left;
         }
     }
 }

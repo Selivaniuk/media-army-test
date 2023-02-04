@@ -4,6 +4,7 @@ import {
   MainScreen,
   Services,
   OurDirection,
+  Promotions,
 } from "components";
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
       <Services />
       <Abstracts />
       <OurDirection />
+      <Promotions />
     </div>
   );
 };
