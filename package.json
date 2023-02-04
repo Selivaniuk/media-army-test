@@ -2,6 +2,7 @@
   "name": "media-army-test",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://selivaniuk.github.io/media-army-test",
   "dependencies": {
     "@pbe/react-yandex-maps": "^1.2.2",
     "@testing-library/jest-dom": "^5.16.5",
@@ -27,7 +28,9 @@
     "start": "cross-env BROWSER=none react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -51,6 +54,7 @@
     "@types/compose-function": "^0.0.30",
     "@types/react-transition-group": "^4.4.5",
     "cross-env": "^7.0.3",
+    "gh-pages": "^5.0.0",
     "sass": "^1.57.1"
   }
 }

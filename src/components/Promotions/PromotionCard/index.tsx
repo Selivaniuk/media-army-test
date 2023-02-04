@@ -7,12 +7,12 @@ const data = [
   {
     name: "Дарим 1000 бонусов за шиномонтаж и хранение",
     date: "11 апреля",
-    src: "/img/Promotion_1.jpg",
+    src: "img/Promotion_1.jpg",
   },
   {
     name: "Специальное предложение для владельцев VOLVO XC 90",
     date: "18 ноября",
-    src: "/img/Promotion_2.jpg",
+    src: "img/Promotion_2.jpg",
   },
 ];
 const motionProps = {

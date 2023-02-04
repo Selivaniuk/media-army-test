@@ -6,23 +6,23 @@ export const data = [
   {
     label: "Ремонт автомобиля",
     href: "repair",
-    src: "/img/repair.jpg",
+    src: "img/repair.jpg",
   },
   {
     label: "Плановое ТО",
     href: "inspection",
-    src: "/img/inspection.jpg",
+    src: "img/inspection.jpg",
   },
 
   {
     label: "Диагностика и ремонт",
     href: "diagnostics",
-    src: "/img/diagnostics.jpg",
+    src: "img/diagnostics.jpg",
   },
   {
     label: "Чип тюнинг",
     href: "tuning",
-    src: "/img/tuning.jpg",
+    src: "img/tuning.jpg",
   },
 ];
 export const servicesRef = createRef<HTMLDivElement>();

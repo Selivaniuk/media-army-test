@@ -10,15 +10,15 @@ import { servicesRef } from "components/Services";
 const slides = [
   {
     alt: "slide_1",
-    src: "/img/SliderImage1.jpg",
+    src: "img/SliderImage1.jpg",
   },
   {
     alt: "slide_2",
-    src: "/img/SliderImage2.jpg",
+    src: "img/SliderImage2.jpg",
   },
   {
     alt: "slide_3",
-    src: "/img/SliderImage3.jpg",
+    src: "img/SliderImage3.jpg",
   },
 ];
 

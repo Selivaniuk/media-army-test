@@ -7,35 +7,35 @@ import styles from "./index.module.scss";
 const logos = [
   {
     alt: "Audi",
-    src: "/img/Logos/Audi.png",
+    src: "img/Logos/Audi.png",
   },
   {
     alt: "BMW",
-    src: "/img/Logos/BMW.png",
+    src: "img/Logos/BMW.png",
   },
   {
     alt: "LandRover",
-    src: "/img/Logos/LandRover.png",
+    src: "img/Logos/LandRover.png",
   },
   {
     alt: "Mercedes",
-    src: "/img/Logos/Mercedes.png",
+    src: "img/Logos/Mercedes.png",
   },
   {
     alt: "Porsche",
-    src: "/img/Logos/Porsche.png",
+    src: "img/Logos/Porsche.png",
   },
   {
     alt: "Skoda",
-    src: "/img/Logos/Skoda.png",
+    src: "img/Logos/Skoda.png",
   },
   {
     alt: "Volkswagen",
-    src: "/img/Logos/Volkswagen.png",
+    src: "img/Logos/Volkswagen.png",
   },
   {
     alt: "Volvo",
-    src: "/img/Logos/Volvo.png",
+    src: "img/Logos/Volvo.png",
   },
 ];
 

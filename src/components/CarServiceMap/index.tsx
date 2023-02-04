@@ -22,7 +22,7 @@ const CarServiceMap = () => {
               geometry={[56.81569, 60.524639]}
               options={{
                 iconLayout: "default#image",
-                iconImageHref: "/img/pin.png",
+                iconImageHref: "img/pin.png",
                 iconImageSize: [80, 80],
               }}
             />
@@ -35,7 +35,7 @@ const CarServiceMap = () => {
           </Map>
         </YMaps>
         <div className={styles.contactsContainer}>
-          <img src="/img/SliderImage1.jpg" alt="contactsImg" />
+          <img src="img/SliderImage1.jpg" alt="contactsImg" />
           <div className={styles.contacts}>
             <div className={styles.info}>
               <div>
