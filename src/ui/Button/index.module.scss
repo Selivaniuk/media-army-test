@@ -120,6 +120,29 @@
         }
     }
 }
+.outline-light {
+    background-color: initial;
+    color: $label-tertiary;
+    border: 1px solid $background-primary;
+
+    svg {
+        color: $label-tertiary;
+    }
+
+    &::before {
+        background-color: $accent;
+    }
+    &:hover {
+        color: $label-primary;
+        &::before {
+            transform: scaleX(1);
+            transform-origin: center left;
+        }
+        svg {
+            color: $label-primary;
+        }
+    }
+}
 
 .small {
     padding: 12px 20px;

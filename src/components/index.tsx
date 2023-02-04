@@ -5,6 +5,7 @@ import Services from "./Services";
 import Abstracts from "./Abstracts";
 import OurDirection from "./OurDirection";
 import Promotions from "./Promotions";
+import Reviews from "./Reviews";
 
 export {
   Header,
@@ -14,4 +15,5 @@ export {
   Abstracts,
   OurDirection,
   Promotions,
+  Reviews,
 };

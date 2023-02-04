@@ -2,7 +2,12 @@ import classNames from "classnames";
 import styles from "./index.module.scss";
 
 type PropsType = Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "type"> & {
-  type?: "filled" | "outline" | "outline-dark" | "filled-light";
+  type?:
+    | "filled"
+    | "outline"
+    | "outline-dark"
+    | "outline-light"
+    | "filled-light";
   size?: "small" | "large";
   rounded?: boolean;
   disabled?: boolean;

@@ -5,6 +5,7 @@ import {
   Services,
   OurDirection,
   Promotions,
+  Reviews,
 } from "components";
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
       <Abstracts />
       <OurDirection />
       <Promotions />
+      <Reviews />
     </div>
   );
 };
