@@ -1,0 +1,67 @@
+@import "utils/variables.scss";
+@import "utils/font-mixins.scss";
+
+.card {
+    display: flex;
+    flex-direction: column;
+
+    background-color: $background-primary;
+    width: 100%;
+    max-width: 650px;
+
+    img {
+        width: 100%;
+    }
+}
+
+.bottom {
+    position: relative;
+    display: flex;
+    padding: 20px;
+
+    @media only screen and (min-width: $tablet-width) {
+        padding: 40px;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transform: scaleX(0);
+        transition: transform 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+        transform-origin: center right;
+        background-color: $accent;
+    }
+}
+.label {
+    @include h4;
+    z-index: 10;
+    color: $label-primary;
+}
+.index {
+    @include h4;
+    color: $label-secondary;
+
+    transition: color 0.3s;
+}
+.button {
+    margin-left: auto;
+}
+
+.hovered {
+    .bottom {
+        &::before {
+            transform: scaleX(1);
+            transform-origin: center left;
+        }
+    }
+    .index {
+        color: $label-tertiary;
+    }
+    .name {
+        z-index: 0;
+    }
+}

@@ -7,6 +7,7 @@ import Select from "./Select";
 import Modal from "./Modal";
 import Layout from "./Layout";
 import ImageSlider from "./ImageSlider";
+import ServiceCard from "./ServiceCard";
 
 export {
   Typography,
@@ -18,4 +19,5 @@ export {
   Modal,
   Layout,
   ImageSlider,
+  ServiceCard,
 };

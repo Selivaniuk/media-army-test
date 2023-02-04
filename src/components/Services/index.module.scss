@@ -1,0 +1,30 @@
+@import "utils/variables.scss";
+@import "utils/font-mixins.scss";
+@import "utils/home-mixins.scss";
+
+.container {
+    @include homeBlock;
+}
+.title {
+    @include h1;
+    color: $label-primary;
+    margin-bottom: 40px;
+    @media only screen and (min-width: $desktop-width) {
+        margin-bottom: 60px;
+    }
+}
+.cards {
+    display: grid;
+    grid-row-gap: 20px;
+    justify-content: center;
+
+    @media only screen and (min-width: 755px) {
+        justify-content: initial;
+        grid-column-gap: 20px;
+        grid-template-columns: 1fr 1fr;
+    }
+    @media only screen and (min-width: $desktop-width) {
+        grid-row-gap: 40px;
+        grid-column-gap: 40px;
+    }
+}

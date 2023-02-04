@@ -1,9 +1,12 @@
-import { MainScreen } from "components";
+import { Abstracts, MainAdvantage, MainScreen, Services } from "components";
 
 const Home = () => {
   return (
     <div>
       <MainScreen />
+      <MainAdvantage />
+      <Services />
+      <Abstracts />
     </div>
   );
 };
