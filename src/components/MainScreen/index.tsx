@@ -6,7 +6,7 @@ import {
   variants_bot_to_top,
   variants_left_to_right,
 } from "utils/utils";
-
+import { servicesRef } from "components/Services";
 const slides = [
   {
     alt: "slide_1",
@@ -23,6 +23,8 @@ const slides = [
 ];
 
 const MainScreen = () => {
+  const executeScroll = () =>
+    servicesRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   return (
     <div className={styles.container}>
       <motion.div {...motion_params} className={styles.info}>
@@ -62,6 +64,7 @@ const MainScreen = () => {
         </div>
         <motion.span custom={5} variants={variants_left_to_right}>
           <Button
+            onClick={executeScroll}
             className={styles.button}
             type="filled-light"
             icon={<Icons.ArrowDown />}

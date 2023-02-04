@@ -1,4 +1,5 @@
-import { Button, Icons, ServiceCard } from "ui";
+import { createRef } from "react";
+import { ServiceCard } from "ui";
 import styles from "./index.module.scss";
 
 export const data = [
@@ -24,10 +25,11 @@ export const data = [
     src: "/img/tuning.jpg",
   },
 ];
+export const servicesRef = createRef<HTMLDivElement>();
 
 const Services = () => {
   return (
-    <div className={styles.container}>
+    <div ref={servicesRef} className={styles.container}>
       <p className={styles.title}>Услуги автосервиса</p>
       <div className={styles.cards}>
         {data.map(({ label, src, href }, i) => (

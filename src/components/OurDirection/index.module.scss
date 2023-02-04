@@ -1,0 +1,30 @@
+@import "utils/variables.scss";
+@import "utils/font-mixins.scss";
+@import "utils/home-mixins.scss";
+
+.container {
+    margin-bottom: 50px;
+
+    @media only screen and (min-width: $tablet-width) {
+        margin-bottom: 60px;
+    }
+    @media only screen and (min-width: $desktop-width) {
+        margin-bottom: 90px;
+    }
+}
+
+.title {
+    color: $label-secondary;
+    @include text_3;
+
+    margin-left: 15px;
+    margin-bottom: 40px;
+
+    @media only screen and (min-width: $tablet-width) {
+        margin-left: 52px;
+    }
+    @media only screen and (min-width: $desktop-width) {
+        margin-left: 130px;
+        margin-bottom: 60px;
+    }
+}

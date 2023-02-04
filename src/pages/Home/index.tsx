@@ -1,4 +1,10 @@
-import { Abstracts, MainAdvantage, MainScreen, Services } from "components";
+import {
+  Abstracts,
+  MainAdvantage,
+  MainScreen,
+  Services,
+  OurDirection,
+} from "components";
 
 const Home = () => {
   return (
@@ -7,6 +13,7 @@ const Home = () => {
       <MainAdvantage />
       <Services />
       <Abstracts />
+      <OurDirection />
     </div>
   );
 };

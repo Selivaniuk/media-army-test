@@ -4,6 +4,9 @@
 
 .container {
     @include homeBlock;
+
+    overflow: hidden;
+    scroll-margin-top: 70px;
 }
 .title {
     @include h1;
