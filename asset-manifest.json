@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/media-army-test/static/css/main.3eb857f9.css",
-    "main.js": "/media-army-test/static/js/main.75c0a305.js",
+    "main.css": "/media-army-test/static/css/main.688154f8.css",
+    "main.js": "/media-army-test/static/js/main.f8e38788.js",
+    "static/media/Consultation.jpg": "/media-army-test/static/media/Consultation.9ed5d0579c22305fe7b9.jpg",
     "static/media/SliderImage1.jpg": "/media-army-test/static/media/SliderImage1.7ad216fb59c10826d6e8.jpg",
     "static/media/SliderImage2.jpg": "/media-army-test/static/media/SliderImage2.7196ea02987f73ae75c5.jpg",
     "static/media/SliderImage3.jpg": "/media-army-test/static/media/SliderImage3.8e1674f25b808be9c443.jpg",
@@ -11,6 +12,7 @@
     "static/media/tuning.jpg": "/media-army-test/static/media/tuning.9ba1f83a8d0524a4828a.jpg",
     "static/media/diagnostics.jpg": "/media-army-test/static/media/diagnostics.f8626573c30808f07f76.jpg",
     "static/media/Promotion_2.jpg": "/media-army-test/static/media/Promotion_2.5a3fa60084b3da9ee630.jpg",
+    "static/media/Iphone.png": "/media-army-test/static/media/Iphone.5f8bafae03afdf67ace7.png",
     "static/media/LandRover.png": "/media-army-test/static/media/LandRover.dc244beedf96ba2fbe17.png",
     "static/media/Porsche.png": "/media-army-test/static/media/Porsche.769742dd8e2f877ebf6b.png",
     "static/media/Volkswagen.png": "/media-army-test/static/media/Volkswagen.ef641b7e0ddb2acf9505.png",
@@ -20,11 +22,11 @@
     "static/media/Audi.png": "/media-army-test/static/media/Audi.788eefc411189201dd66.png",
     "static/media/Mercedes.png": "/media-army-test/static/media/Mercedes.bcdf24f1a05365dde276.png",
     "index.html": "/media-army-test/index.html",
-    "main.3eb857f9.css.map": "/media-army-test/static/css/main.3eb857f9.css.map",
-    "main.75c0a305.js.map": "/media-army-test/static/js/main.75c0a305.js.map"
+    "main.688154f8.css.map": "/media-army-test/static/css/main.688154f8.css.map",
+    "main.f8e38788.js.map": "/media-army-test/static/js/main.f8e38788.js.map"
   },
   "entrypoints": [
-    "static/css/main.3eb857f9.css",
-    "static/js/main.75c0a305.js"
+    "static/css/main.688154f8.css",
+    "static/js/main.f8e38788.js"
   ]
 }
