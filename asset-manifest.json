@@ -1,13 +1,30 @@
 {
   "files": {
-    "main.css": "/media-army-test/static/css/main.8194ccca.css",
-    "main.js": "/media-army-test/static/js/main.4fe6e0a1.js",
+    "main.css": "/media-army-test/static/css/main.3eb857f9.css",
+    "main.js": "/media-army-test/static/js/main.75c0a305.js",
+    "static/media/SliderImage1.jpg": "/media-army-test/static/media/SliderImage1.7ad216fb59c10826d6e8.jpg",
+    "static/media/SliderImage2.jpg": "/media-army-test/static/media/SliderImage2.7196ea02987f73ae75c5.jpg",
+    "static/media/SliderImage3.jpg": "/media-army-test/static/media/SliderImage3.8e1674f25b808be9c443.jpg",
+    "static/media/inspection.jpg": "/media-army-test/static/media/inspection.1cc16d5e0b03672d5f95.jpg",
+    "static/media/Promotion_1.jpg": "/media-army-test/static/media/Promotion_1.6c39625ab76fe4b82e97.jpg",
+    "static/media/repair.jpg": "/media-army-test/static/media/repair.24c1ef7ca34f6bb95c44.jpg",
+    "static/media/tuning.jpg": "/media-army-test/static/media/tuning.9ba1f83a8d0524a4828a.jpg",
+    "static/media/diagnostics.jpg": "/media-army-test/static/media/diagnostics.f8626573c30808f07f76.jpg",
+    "static/media/Promotion_2.jpg": "/media-army-test/static/media/Promotion_2.5a3fa60084b3da9ee630.jpg",
+    "static/media/LandRover.png": "/media-army-test/static/media/LandRover.dc244beedf96ba2fbe17.png",
+    "static/media/Porsche.png": "/media-army-test/static/media/Porsche.769742dd8e2f877ebf6b.png",
+    "static/media/Volkswagen.png": "/media-army-test/static/media/Volkswagen.ef641b7e0ddb2acf9505.png",
+    "static/media/BMW.png": "/media-army-test/static/media/BMW.d2e19dc1e52336f9ff4f.png",
+    "static/media/Volvo.png": "/media-army-test/static/media/Volvo.eb630a8d302c2f7294be.png",
+    "static/media/Skoda.png": "/media-army-test/static/media/Skoda.b6cb599002f6365399d7.png",
+    "static/media/Audi.png": "/media-army-test/static/media/Audi.788eefc411189201dd66.png",
+    "static/media/Mercedes.png": "/media-army-test/static/media/Mercedes.bcdf24f1a05365dde276.png",
     "index.html": "/media-army-test/index.html",
-    "main.8194ccca.css.map": "/media-army-test/static/css/main.8194ccca.css.map",
-    "main.4fe6e0a1.js.map": "/media-army-test/static/js/main.4fe6e0a1.js.map"
+    "main.3eb857f9.css.map": "/media-army-test/static/css/main.3eb857f9.css.map",
+    "main.75c0a305.js.map": "/media-army-test/static/js/main.75c0a305.js.map"
   },
   "entrypoints": [
-    "static/css/main.8194ccca.css",
-    "static/js/main.4fe6e0a1.js"
+    "static/css/main.3eb857f9.css",
+    "static/js/main.75c0a305.js"
   ]
 }
