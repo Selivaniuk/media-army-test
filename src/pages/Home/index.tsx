@@ -7,6 +7,8 @@ import {
   Promotions,
   Reviews,
   CarServiceMap,
+  Consultation,
+  MobileApp,
 } from "components";
 
 const Home = () => {
@@ -20,6 +22,8 @@ const Home = () => {
       <Promotions />
       <Reviews />
       <CarServiceMap />
+      <Consultation />
+      <MobileApp />
     </div>
   );
 };

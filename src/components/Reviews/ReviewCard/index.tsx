@@ -34,10 +34,10 @@ const ReviewCard = () => {
   const handleClickArrow = (isLeft?: boolean) => {
     setCurrentIndex((prev) =>
       isLeft
-        ? currentIndex === 0
+        ? prev === 0
           ? data.length - 1
           : prev - 1
-        : currentIndex === data.length - 1
+        : prev === data.length - 1
         ? 0
         : prev + 1
     );

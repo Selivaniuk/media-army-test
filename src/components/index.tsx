@@ -7,6 +7,8 @@ import OurDirection from "./OurDirection";
 import Promotions from "./Promotions";
 import Reviews from "./Reviews";
 import CarServiceMap from "./CarServiceMap";
+import Consultation from "./Consultation";
+import MobileApp from "./MobileApp";
 
 export {
   Header,
@@ -18,4 +20,6 @@ export {
   Promotions,
   Reviews,
   CarServiceMap,
+  Consultation,
+  MobileApp,
 };
