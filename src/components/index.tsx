@@ -9,6 +9,7 @@ import Reviews from "./Reviews";
 import CarServiceMap from "./CarServiceMap";
 import Consultation from "./Consultation";
 import MobileApp from "./MobileApp";
+import Footer from "./Footer";
 
 export {
   Header,
@@ -22,4 +23,5 @@ export {
   CarServiceMap,
   Consultation,
   MobileApp,
+  Footer,
 };

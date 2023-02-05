@@ -1,0 +1,83 @@
+@import "utils/variables.scss";
+@import "utils/font-mixins.scss";
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    background-color: $background-quaternary;
+    padding: 40px 15px;
+
+    @media only screen and (min-width: $tablet-width) {
+        padding: 40px 52px;
+    }
+    @media only screen and (min-width: $desktop-width) {
+        padding: 60px 130px 40px 130px;
+    }
+}
+
+.communication {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+
+    @media only screen and (min-width: $tablet-width) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    @media only screen and (min-width: $desktop-width) {
+        flex-direction: column;
+    }
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.mail {
+    @include h4;
+    color: $accent;
+}
+.time {
+    @include text_2;
+    color: $label-secondary;
+}
+.buttons {
+    display: flex;
+    gap: 5px;
+
+    @media only screen and (min-width: $desktop-width) {
+        flex-direction: column;
+    }
+}
+.button {
+    padding: 15px 20px;
+    width: max-content;
+    height: max-content;
+
+    > p {
+        @include text_2;
+    }
+
+    @media only screen and (min-width: $desktop-width) {
+        width: 220px;
+        > p {
+            @include button;
+        }
+    }
+}
+.outlineButton {
+    > p {
+        color: $label-tertiary;
+        transition: color 0.3s;
+    }
+    &:hover {
+        > p {
+            color: $label-primary;
+        }
+    }
+}

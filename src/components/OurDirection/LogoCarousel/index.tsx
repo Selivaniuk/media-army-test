@@ -49,6 +49,7 @@ const logos = [
     src: Volvo,
   },
 ];
+
 const variants_right_to_left = {
   hidden: (custom: number) => ({
     x: custom - 100,

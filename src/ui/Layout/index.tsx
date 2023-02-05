@@ -1,4 +1,4 @@
-import { Header } from "components";
+import { Footer, Header } from "components";
 import styles from "./index.module.scss";
 
 type PropsType = {
@@ -9,6 +9,7 @@ const Layout: React.FC<PropsType> = ({ children }) => {
     <>
       <Header />
       <div className={styles.layout}>{children}</div>
+      <Footer />
     </>
   );
 };
