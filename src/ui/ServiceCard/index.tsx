@@ -21,7 +21,7 @@ const ServiceCard: React.FC<PropsType> = ({ label, index, src }) => {
     <motion.div
       {...motion_params}
       viewport={{ amount: 0.3, once: true }}
-      custom={index / 4}
+      custom={index}
       variants={
         (index + 1) % 2 === 0 ? variants_right_to_left : variants_left_to_right
       }

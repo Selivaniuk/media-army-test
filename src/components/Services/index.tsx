@@ -2,27 +2,31 @@ import { createRef } from "react";
 import { ServiceCard } from "ui";
 import styles from "./index.module.scss";
 
+import repair from "assets/img/Services/repair.jpg";
+import inspection from "assets/img/Services/inspection.jpg";
+import diagnostics from "assets/img/Services/diagnostics.jpg";
+import tuning from "assets/img/Services/tuning.jpg";
 export const data = [
   {
     label: "Ремонт автомобиля",
     href: "repair",
-    src: "img/repair.jpg",
+    src: repair,
   },
   {
     label: "Плановое ТО",
     href: "inspection",
-    src: "img/inspection.jpg",
+    src: inspection,
   },
 
   {
     label: "Диагностика и ремонт",
     href: "diagnostics",
-    src: "img/diagnostics.jpg",
+    src: diagnostics,
   },
   {
     label: "Чип тюнинг",
     href: "tuning",
-    src: "img/tuning.jpg",
+    src: tuning,
   },
 ];
 export const servicesRef = createRef<HTMLDivElement>();

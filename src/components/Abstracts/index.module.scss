@@ -5,6 +5,8 @@
 .container {
     @include homeBlock;
 
+    overflow: hidden;
+
     display: flex;
     flex-direction: column;
     gap: 40px;

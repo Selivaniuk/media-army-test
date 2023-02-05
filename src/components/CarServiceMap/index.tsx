@@ -2,6 +2,8 @@ import { YMaps, Map, Placemark, ZoomControl } from "@pbe/react-yandex-maps";
 import { Button, Icons } from "ui";
 import styles from "./index.module.scss";
 import "./mapStyle.scss";
+import Pin from "assets/img/Map/pin.png";
+import SliderImage1 from "assets/img/Slider/SliderImage1.jpg";
 
 const url =
   "https://yandex.ru/maps/54/yekaterinburg/?from=api-maps&ll=60.524639%2C56.815690&mode=routes&origin=jsapi_2_1_79&rtext=~56.815690%2C60.524639&rtt=mt&ruri=~ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNjEzNTI4NTA5ErwB0KDQvtGB0YHQuNGPLCDQodCy0LXRgNC00LvQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsINC80YPQvdC40YbQuNC%2F0LDQu9GM0L3QvtC1INC%2B0LHRgNCw0LfQvtCy0LDQvdC40LUg0JXQutCw0YLQtdGA0LjQvdCx0YPRgNCzLCDQnNC%2B0YHQutC%2B0LLRgdC60LjQuSDRgtGA0LDQutGCLCA3LdC5INC60LjQu9C%2B0LzQtdGC0YAsIDIiCg07GXJCFURDY0I%3D&z=15";
@@ -22,7 +24,7 @@ const CarServiceMap = () => {
               geometry={[56.81569, 60.524639]}
               options={{
                 iconLayout: "default#image",
-                iconImageHref: "img/pin.png",
+                iconImageHref: Pin,
                 iconImageSize: [80, 80],
               }}
             />
@@ -35,7 +37,7 @@ const CarServiceMap = () => {
           </Map>
         </YMaps>
         <div className={styles.contactsContainer}>
-          <img src="img/SliderImage1.jpg" alt="contactsImg" />
+          <img src={SliderImage1} alt="contactsImg" />
           <div className={styles.contacts}>
             <div className={styles.info}>
               <div>

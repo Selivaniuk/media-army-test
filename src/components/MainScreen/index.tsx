@@ -1,24 +1,24 @@
-import { Button, Icons, ImageSlider } from "ui";
+import { AnimatedText, Button, Icons, ImageSlider } from "ui";
 import styles from "./index.module.scss";
 import { motion } from "framer-motion";
-import {
-  motion_params,
-  variants_bot_to_top,
-  variants_left_to_right,
-} from "utils/utils";
+import { motion_params, variants_left_to_right } from "utils/utils";
 import { servicesRef } from "components/Services";
+import SliderImage1 from "assets/img/Slider/SliderImage1.jpg";
+import SliderImage2 from "assets/img/Slider/SliderImage2.jpg";
+import SliderImage3 from "assets/img/Slider/SliderImage3.jpg";
+
 const slides = [
   {
     alt: "slide_1",
-    src: "img/SliderImage1.jpg",
+    src: SliderImage1,
   },
   {
     alt: "slide_2",
-    src: "img/SliderImage2.jpg",
+    src: SliderImage2,
   },
   {
     alt: "slide_3",
-    src: "img/SliderImage3.jpg",
+    src: SliderImage3,
   },
 ];
 
@@ -28,23 +28,26 @@ const MainScreen = () => {
   return (
     <div className={styles.container}>
       <motion.div {...motion_params} className={styles.info}>
-        <motion.p
-          custom={1}
-          variants={variants_bot_to_top}
+        <AnimatedText
           className={styles.title}
-        >
-          Специализированный Автосервис
-        </motion.p>
-        <motion.p
+          text="Специализированный Автосервис"
+        />
+        <AnimatedText
+          className={styles.number}
+          delay={0.6}
+          staggerChildren={0}
+          text="+7 (999) 123-45-67"
+        />
+        {/* <motion.p
           custom={2}
           variants={variants_bot_to_top}
           className={styles.number}
         >
-          +7 (999) 123-45-67
-        </motion.p>
+          
+        </motion.p> */}
         <div className={styles.addresses}>
           <motion.div
-            custom={3}
+            custom={4}
             variants={variants_left_to_right}
             className={styles.address}
           >
@@ -52,7 +55,7 @@ const MainScreen = () => {
             <p className={styles.value}>Ежедневно с 9:00 до 21:00</p>
           </motion.div>
           <motion.div
-            custom={4}
+            custom={5}
             variants={variants_left_to_right}
             className={styles.address}
           >
@@ -62,7 +65,7 @@ const MainScreen = () => {
             </p>
           </motion.div>
         </div>
-        <motion.span custom={5} variants={variants_left_to_right}>
+        <motion.span custom={6} variants={variants_left_to_right}>
           <Button
             onClick={executeScroll}
             className={styles.button}

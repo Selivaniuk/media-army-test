@@ -3,16 +3,18 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Button, Icons, Link } from "ui";
 import styles from "./index.module.scss";
 
+import Promotion_1 from "assets/img/Promotions/Promotion_1.jpg";
+import Promotion_2 from "assets/img/Promotions/Promotion_2.jpg";
 const data = [
   {
     name: "Дарим 1000 бонусов за шиномонтаж и хранение",
     date: "11 апреля",
-    src: "img/Promotion_1.jpg",
+    src: Promotion_1,
   },
   {
     name: "Специальное предложение для владельцев VOLVO XC 90",
     date: "18 ноября",
-    src: "img/Promotion_2.jpg",
+    src: Promotion_2,
   },
 ];
 const motionProps = {
@@ -38,7 +40,7 @@ const PromotionCard = () => {
   };
 
   return (
-    <AnimatePresence initial={false} mode="wait">
+    <AnimatePresence initial={true} mode="wait">
       <div key={"PromotionCard" + currentIndex} className={styles.card}>
         <div className={styles.imageContainer}>
           <motion.img

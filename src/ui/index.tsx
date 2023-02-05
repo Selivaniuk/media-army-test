@@ -8,6 +8,7 @@ import Modal from "./Modal";
 import Layout from "./Layout";
 import ImageSlider from "./ImageSlider";
 import ServiceCard from "./ServiceCard";
+import AnimatedText from "./AnimatedText";
 
 export {
   Typography,
@@ -20,4 +21,5 @@ export {
   Layout,
   ImageSlider,
   ServiceCard,
+  AnimatedText,
 };

@@ -3,42 +3,61 @@ import { useCallback, useRef, useState } from "react";
 import { useDraggable } from "react-use-draggable-scroll";
 import useWindowDimensions from "hooks/useWindowDimensions";
 import styles from "./index.module.scss";
+import { motion } from "framer-motion";
+import { motion_params } from "utils/utils";
+
+import Audi from "assets/img/Logos/Audi.png";
+import BMW from "assets/img/Logos/BMW.png";
+import LandRover from "assets/img/Logos/LandRover.png";
+import Mercedes from "assets/img/Logos/Mercedes.png";
+import Porsche from "assets/img/Logos/Porsche.png";
+import Skoda from "assets/img/Logos/Skoda.png";
+import Volkswagen from "assets/img/Logos/Volkswagen.png";
+import Volvo from "assets/img/Logos/Volvo.png";
 
 const logos = [
   {
     alt: "Audi",
-    src: "img/Logos/Audi.png",
+    src: Audi,
   },
   {
     alt: "BMW",
-    src: "img/Logos/BMW.png",
+    src: BMW,
   },
   {
     alt: "LandRover",
-    src: "img/Logos/LandRover.png",
+    src: LandRover,
   },
   {
     alt: "Mercedes",
-    src: "img/Logos/Mercedes.png",
+    src: Mercedes,
   },
   {
     alt: "Porsche",
-    src: "img/Logos/Porsche.png",
+    src: Porsche,
   },
   {
     alt: "Skoda",
-    src: "img/Logos/Skoda.png",
+    src: Skoda,
   },
   {
     alt: "Volkswagen",
-    src: "img/Logos/Volkswagen.png",
+    src: Volkswagen,
   },
   {
     alt: "Volvo",
-    src: "img/Logos/Volvo.png",
+    src: Volvo,
   },
 ];
-
+const variants_right_to_left = {
+  hidden: (custom: number) => ({
+    x: custom - 100,
+  }),
+  visible: {
+    x: 0,
+    transition: { delay: 0.3, duration: 1 },
+  },
+};
 const LogoCarousel = () => {
   const [logoSize, setLogoSize] = useState({ width: 0, height: 0 });
   const ref = useRef<HTMLDivElement>(
@@ -68,7 +87,12 @@ const LogoCarousel = () => {
       style={{ height: logoSize.height }}
       className={styles.container}
     >
-      <div className={styles.logos}>
+      <motion.div
+        {...motion_params}
+        custom={width}
+        variants={variants_right_to_left}
+        className={styles.logos}
+      >
         {logos.map((logo, i) => (
           <div
             ref={measuredRef}
@@ -79,7 +103,7 @@ const LogoCarousel = () => {
             <img src={logo.src} alt={logo.alt} />
           </div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 };
