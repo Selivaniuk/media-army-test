@@ -9,7 +9,7 @@ import {
   CarServiceMap,
   Consultation,
   MobileApp,
-} from "components";
+} from "components/HomePage";
 
 const Home = () => {
   return (

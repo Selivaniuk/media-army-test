@@ -1,0 +1,50 @@
+@import "utils/styles/variables.scss";
+@import "utils/styles/font-mixins.scss";
+
+.container {
+    background: url("/assets/img/Consultation.jpg") no-repeat;
+    background-size: cover;
+
+    padding: 40px 15px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    @media only screen and (min-width: $tablet-width) {
+        padding: 120px 52px;
+        gap: 40px;
+    }
+    @media only screen and (min-width: $desktop-width) {
+        padding: 180px 130px;
+        gap: 60px;
+    }
+}
+
+.title {
+    @include text_3;
+    color: $label-tertiary;
+
+    border-top: 1px solid $separator-primary;
+    width: 100%;
+
+    padding-top: 10px;
+}
+.bot {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @media only screen and (min-width: $desktop-width) {
+        width: 650px;
+        margin-left: auto;
+    }
+}
+.text {
+    @include description;
+    color: $label-tertiary;
+}
+.button {
+    width: max-content;
+    padding: 15px 20px;
+}

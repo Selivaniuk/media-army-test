@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { CSSTransition } from "react-transition-group";
-import RegistrationModal from "components/RegistrationModal";
+import { RegistrationModal } from "components/Modals";
 import { Button } from "ui";
 import styles from "./index.module.scss";
 import "./animations.scss";

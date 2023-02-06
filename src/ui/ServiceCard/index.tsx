@@ -7,7 +7,7 @@ import {
   motion_params,
   variants_left_to_right,
   variants_right_to_left,
-} from "utils/utils";
+} from "utils/framer_utils";
 
 type PropsType = {
   src: string;

@@ -1,0 +1,69 @@
+@import "utils/styles/variables.scss";
+@import "utils/styles/font-mixins.scss";
+@import "utils/styles/home-mixins.scss";
+
+.container {
+    @include homeBlock;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    p {
+        color: $label-primary;
+    }
+    svg {
+        color: $accent;
+    }
+    > div {
+        width: 100%;
+    }
+    @media only screen and (min-width: $desktop-width) {
+        flex-direction: row;
+    }
+}
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 40px;
+    column-gap: 5px;
+
+    @media only screen and (min-width: $tablet-width) {
+        column-gap: 20px;
+    }
+    @media only screen and (min-width: $desktop-width) {
+        row-gap: 60px;
+        column-gap: 80px;
+    }
+}
+.description {
+    @include description;
+    margin-bottom: 20px;
+}
+.text {
+    width: 70%;
+    @include text_1;
+}
+.item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    > svg {
+        width: 50px;
+        height: 50px;
+        @media only screen and (min-width: $desktop-width) {
+            width: 60px;
+            height: 60px;
+        }
+    }
+    > p {
+        @include h4;
+    }
+}

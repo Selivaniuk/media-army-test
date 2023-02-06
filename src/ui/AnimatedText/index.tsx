@@ -26,6 +26,7 @@ const item = {
 type PopsType = {
   text: string;
   className?: string;
+  containerClassName?: string;
   delay?: number;
   staggerChildren?: number;
 };
@@ -33,6 +34,7 @@ type PopsType = {
 const AnimatedText: React.FC<PopsType> = ({
   text,
   className,
+  containerClassName,
   delay = 0,
   staggerChildren = 0.015,
 }) => {
@@ -50,7 +52,12 @@ const AnimatedText: React.FC<PopsType> = ({
   });
 
   return (
-    <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }}>
+    <motion.p
+      className={containerClassName}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
       {words.map((_, index) => (
         <span
           key={"wrapper" + index}

@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import FeedbackModal from "components/FeedbackModal";
+import { FeedbackModal } from "components/Modals";
 import { header_links } from "components/Header";
 import { center_links } from "components/Header/NavigationMenu";
 import { service_links } from "components/Header/ServicesMenu";
