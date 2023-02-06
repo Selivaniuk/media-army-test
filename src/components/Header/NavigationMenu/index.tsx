@@ -27,6 +27,10 @@ export const center_links = [
     href: "vag",
   },
   {
+    label: "Автосервис BMW",
+    href: "bmw",
+  },
+  {
     label: "Автосервис Mercedes",
     href: "mercedes",
   },
@@ -40,15 +44,6 @@ const NavigationMenu: React.FC<PropsType> = ({ visible }) => {
   const { width } = useWindowDimensions();
   useDisableBodyScroll(visible);
 
-  //   useEffect(() => {
-  //     if (
-  //       menuRef.current &&
-  //       width < 1350 &&
-  //       height > (menuRef.current.scrollHeight - 40 + menuPadding * 2) * 2
-  //     ) {
-  //       document.body.style.overflow = visible ? "hidden" : "visible";
-  //     }
-  //   }, [visible]);
   return (
     <CSSTransition
       nodeRef={menuRef}

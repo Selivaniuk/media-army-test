@@ -4,7 +4,10 @@
 .button {
     position: relative;
 
+    width: max-content;
+
     display: flex;
+    // display: inline-flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
