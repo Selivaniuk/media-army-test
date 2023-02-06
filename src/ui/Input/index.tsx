@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import classNames from "classnames";
 import styles from "./index.module.scss";
 import InputContainer from "ui/InputContainer";
@@ -23,7 +23,6 @@ const Input: React.FC<PropsType> = ({
   suffix,
   ...props
 }) => {
-  const inputValue = useRef("");
   const [focused, setFocused] = useState(false);
   const containerData = {
     placeholder,
@@ -36,7 +35,7 @@ const Input: React.FC<PropsType> = ({
   return (
     <InputContainer
       {...containerData}
-      hasValue={!!inputValue.current.length || !!props.value}
+      hasValue={!!props.value}
       isFocused={focused}
     >
       <input
@@ -46,10 +45,6 @@ const Input: React.FC<PropsType> = ({
         }}
         onBlur={(e) => {
           setFocused(false);
-        }}
-        onChange={(e) => {
-          props.onChange?.(e);
-          inputValue.current = e.target.value;
         }}
         className={classNames([styles.input, className])}
       />
