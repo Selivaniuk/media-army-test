@@ -13,7 +13,7 @@ type PropsType = {
   visible: boolean;
 };
 
-const center_links = [
+export const center_links = [
   {
     label: "Автосервис VOLVO",
     href: "volvo",

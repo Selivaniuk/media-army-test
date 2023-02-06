@@ -21,6 +21,7 @@
     flex-direction: column;
 
     gap: 20px;
+    margin-bottom: 40px;
 
     @media only screen and (min-width: $tablet-width) {
         flex-direction: row;
@@ -28,6 +29,7 @@
     }
     @media only screen and (min-width: $desktop-width) {
         flex-direction: column;
+        margin-bottom: 0px;
     }
 }
 
@@ -79,5 +81,176 @@
         > p {
             color: $label-primary;
         }
+    }
+}
+.right_top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+.header_links {
+    display: flex;
+    flex-direction: column;
+
+    .link {
+        padding: 5px 15px 5px 0px;
+
+        > a {
+            @include h4;
+            color: $label-tertiary;
+        }
+        @media only screen and (min-width: $tablet-width) {
+            padding: 5px 0px;
+        }
+    }
+    @media only screen and (min-width: $tablet-width) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 20px;
+
+        max-width: 50%;
+    }
+    @media only screen and (min-width: $desktop-width) {
+        flex-wrap: nowrap;
+        max-width: max-content;
+    }
+}
+.personalArea {
+    display: flex;
+    gap: 5px;
+    padding: 5px 0px 5px 15px;
+    height: max-content;
+    > a {
+        @include h4;
+        color: $label-tertiary;
+    }
+    > svg {
+        width: 22px;
+        height: 22px;
+        color: $label-secondary;
+        min-width: auto;
+
+        @media only screen and (min-width: $tablet-width) {
+            width: 24px;
+            height: 24px;
+        }
+    }
+    @media only screen and (min-width: $desktop-width) {
+        padding: 5px 0px;
+        margin-left: auto;
+    }
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 40px;
+    @media only screen and (min-width: $tablet-width) {
+        flex-direction: row;
+        gap: 20px;
+
+        > div {
+            width: 100%;
+        }
+    }
+    @media only screen and (min-width: $desktop-width) {
+        gap: 40px;
+        margin-bottom: 0px;
+    }
+}
+.menuBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .title {
+        @include h4;
+        color: $label-secondary;
+        border-bottom: 1px solid $separator-primary;
+        padding-bottom: 10px;
+        @media only screen and (min-width: $desktop-width) {
+            padding-bottom: 20px;
+        }
+    }
+    .menuLinks {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        a {
+            color: $label-tertiary;
+        }
+    }
+    @media only screen and (min-width: $desktop-width) {
+        gap: 20px;
+    }
+}
+.social {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    @media only screen and (min-width: $desktop-width) {
+        margin-bottom: 0px;
+    }
+}
+.addresses {
+    display: flex;
+    gap: 5px;
+
+    @media only screen and (min-width: $tablet-width) {
+        gap: 20px;
+    }
+    @media only screen and (min-width: $desktop-width) {
+        gap: 0px;
+        justify-content: space-between;
+        width: 100%;
+        > div {
+            width: 100%;
+        }
+    }
+}
+.address_title {
+    @include text_3;
+    color: $label-tertiary;
+}
+.placeholder {
+    @include text_2;
+    color: $label-secondary;
+}
+.companyInfo {
+    display: flex;
+    justify-content: space-between;
+}
+.design {
+    @include text_2;
+    color: $label-secondary;
+
+    a {
+        color: $label-tertiary;
+    }
+}
+.desktop_bottom {
+    border-bottom: 1px solid $separator-primary;
+
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+
+    @media only screen and (min-width: $desktop-width) {
+        margin-bottom: 40px;
+        padding-bottom: 40px;
+    }
+}
+@media only screen and (min-width: $desktop-width) {
+    .desktop_top {
+        display: flex;
+        gap: 140px;
+        margin-bottom: 60px;
+        // justify-content: space-between;
+    }
+    .desktop_right {
+        width: 100%;
+    }
+    .desktop_bottom {
+        display: flex;
+        gap: 90px;
     }
 }

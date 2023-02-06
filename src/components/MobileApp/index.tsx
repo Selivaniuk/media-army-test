@@ -18,8 +18,8 @@ const MobileApp = () => {
       <div className={styles.top}>
         <p className={styles.title}>Скачивайте наше мобильное приложение</p>
         <div className={styles.texts}>
-          {texts.map((t) => (
-            <div className={styles.textContainer}>
+          {texts.map((t, i) => (
+            <div key={i} className={styles.textContainer}>
               <Icons.Check />
               <p>{t}</p>
             </div>

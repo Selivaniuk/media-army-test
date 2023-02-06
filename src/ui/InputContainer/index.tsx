@@ -39,7 +39,7 @@ const InputContainer: React.FC<PropsType> = ({
     >
       {placeholder && !hasValue && (
         <span className={styles.placeholder}>
-          {placeholder} <Typography.Text1>*</Typography.Text1>
+          {placeholder} {required && <Typography.Text1>*</Typography.Text1>}
         </span>
       )}
       {label && (

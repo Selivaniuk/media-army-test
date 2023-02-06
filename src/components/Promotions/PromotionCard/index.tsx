@@ -40,7 +40,7 @@ const PromotionCard = () => {
   };
 
   return (
-    <AnimatePresence initial={true} mode="wait">
+    <AnimatePresence initial={true} mode="popLayout">
       <div key={"PromotionCard" + currentIndex} className={styles.card}>
         <div className={styles.imageContainer}>
           <motion.img
