@@ -1,14 +1,5 @@
 import { motion } from "framer-motion";
 
-const container = {
-  visible: (custom: { staggerChildren: number }) => ({
-    transition: {
-      //   ...custom,
-      delay: 10,
-    },
-  }),
-};
-
 const item = {
   hidden: {
     y: "200%",
@@ -59,33 +50,32 @@ const AnimatedText: React.FC<PopsType> = ({
   });
 
   return (
-    <motion.p
-      initial="hidden"
-      whileInView="visible"
-      variants={container}
-      custom={{ staggerChildren }}
-      viewport={{ once: true }}
-    >
-      {words.map((_, index) =>
-        words[index].flat().map((e: string, i: number) => (
-          <span
-            key={i}
-            style={{
-              overflow: "hidden",
-              display: "inline-block",
-            }}
-          >
-            <motion.span
-              className={className}
-              custom={{ index: i, delay, staggerChildren }}
-              variants={item}
-              style={{ display: "inline-block" }}
+    <motion.p initial="hidden" whileInView="visible" viewport={{ once: true }}>
+      {words.map((_, index) => (
+        <span
+          key={"wrapper" + index}
+          style={{ whiteSpace: "nowrap", display: "block" }}
+        >
+          {words[index].flat().map((e: string, i: number) => (
+            <span
+              key={i}
+              style={{
+                overflow: "hidden",
+                display: "inline-block",
+              }}
             >
-              {e}
-            </motion.span>
-          </span>
-        ))
-      )}
+              <motion.span
+                className={className}
+                custom={{ index: i, delay, staggerChildren }}
+                variants={item}
+                style={{ display: "inline-block" }}
+              >
+                {e}
+              </motion.span>
+            </span>
+          ))}
+        </span>
+      ))}
     </motion.p>
   );
 };

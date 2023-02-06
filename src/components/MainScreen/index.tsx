@@ -36,15 +36,8 @@ const MainScreen = () => {
           className={styles.number}
           delay={0.6}
           staggerChildren={0}
-          text="+7 (999) 123-45-67"
+          text="+7(999)123-45-67"
         />
-        {/* <motion.p
-          custom={2}
-          variants={variants_bot_to_top}
-          className={styles.number}
-        >
-          
-        </motion.p> */}
         <div className={styles.addresses}>
           <motion.div
             custom={4}
