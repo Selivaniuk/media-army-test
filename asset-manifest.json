@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/media-army-test/static/css/main.f8d485da.css",
-    "main.js": "/media-army-test/static/js/main.9d5336b0.js",
+    "main.css": "/media-army-test/static/css/main.4d55886d.css",
+    "main.js": "/media-army-test/static/js/main.991c91c9.js",
     "static/media/Consultation.jpg": "/media-army-test/static/media/Consultation.9ed5d0579c22305fe7b9.jpg",
     "static/media/SliderImage1.jpg": "/media-army-test/static/media/SliderImage1.7ad216fb59c10826d6e8.jpg",
     "static/media/SliderImage2.jpg": "/media-army-test/static/media/SliderImage2.7196ea02987f73ae75c5.jpg",
@@ -22,11 +22,11 @@
     "static/media/Audi.png": "/media-army-test/static/media/Audi.788eefc411189201dd66.png",
     "static/media/Mercedes.png": "/media-army-test/static/media/Mercedes.bcdf24f1a05365dde276.png",
     "index.html": "/media-army-test/index.html",
-    "main.f8d485da.css.map": "/media-army-test/static/css/main.f8d485da.css.map",
-    "main.9d5336b0.js.map": "/media-army-test/static/js/main.9d5336b0.js.map"
+    "main.4d55886d.css.map": "/media-army-test/static/css/main.4d55886d.css.map",
+    "main.991c91c9.js.map": "/media-army-test/static/js/main.991c91c9.js.map"
   },
   "entrypoints": [
-    "static/css/main.f8d485da.css",
-    "static/js/main.9d5336b0.js"
+    "static/css/main.4d55886d.css",
+    "static/js/main.991c91c9.js"
   ]
 }
